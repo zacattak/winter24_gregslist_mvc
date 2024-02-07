@@ -1,7 +1,9 @@
+import { generateId } from "../utils/GenerateId.js"
 
 export class Car {
 
   constructor (data) {
+    this.id = generateId()
     this.make = data.make
     this.model = data.model
     this.mileage = data.mileage
@@ -26,6 +28,7 @@ export class Car {
 
         <div class="py-2 px-5">
           <h2>${this.year} ${this.make} ${this.model}</h2>
+          
           <h2>$${this.price}</h2>
           <h3>${this.mileage} Miles</h3>
           <h4>Listed on ${this.ListedAtDate}</h4>
@@ -37,6 +40,9 @@ export class Car {
           </div>
           <div class="fs-1">
             ${this.SalvagedTitleIcon}
+          </div>
+          <div>
+            <button onclick="app.CarsController.removeCar('${this.id}')" class="btn btn-danger">Delete Car</button>
           </div>
         </div>
       </div>

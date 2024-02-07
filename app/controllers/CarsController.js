@@ -18,8 +18,14 @@ function _drawCars() {
 
 export class CarsController {
   constructor () {
+    // ANCHOR page load
     console.log('Cars controller loaded');
+    carsService.loadCarsFromLocalStorage()
     _drawCars()
+
+
+    // ANCHOR listeners
+    AppState.on('cars', _drawCars)
   }
 
   createCar() {
@@ -36,13 +42,33 @@ export class CarsController {
 
       const carFormData = getFormData(form)
 
+      // NOTE converts "on" value to boolean
+      carFormData.hasSalvagedTitle = carFormData.hasSalvagedTitle == 'on'
+
       console.log('here is your car data object!', carFormData);
 
       carsService.createCar(carFormData)
+
+      // @ts-ignore
+      form.reset()
 
     } catch (error) {
       console.error(error);
       Pop.error(error.message)
     }
+  }
+
+  async removeCar(carId) {
+    const wantsToRemove = await Pop.confirm('Are you sure you want to delete this car?')
+
+    // const wantsToRemove = window.confirm('Are you sure you want to delete this car?')
+
+    if (!wantsToRemove) {
+      return
+    }
+
+    console.log('removing car with this id', carId);
+
+    carsService.removeCar(carId)
   }
 }
