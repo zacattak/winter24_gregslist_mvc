@@ -12,12 +12,9 @@ export class Car {
     this.description = data.description
     this.hasSalvagedTitle = data.hasSalvagedTitle
     // NOTE creates a new date object with the current date and time if no argument is passed to the date constructor
+    // NOTE this date object has methods attached to it to format the date in various ways
     this.listedAt = new Date()
   }
-
-  // get makeAndModel() {
-  //   return this.make + this.model
-  // }
 
   get CarCardHTMLTemplate() {
     return `
@@ -48,13 +45,16 @@ export class Car {
   }
 
   get ListedAtTime() {
+    // NOTE 11:35:11 AM
     return this.listedAt.toLocaleTimeString()
   }
   get ListedAtDate() {
+    // NOTE 2/7/2024
     return this.listedAt.toLocaleDateString()
   }
 
   get SalvagedTitleIcon() {
+    // NOTE look at the boolean value on this class and return the correct icon
     if (this.hasSalvagedTitle) {
       return '<i class="mdi mdi-engine-off" title="This car has a salvaged title"></i>'
     }
