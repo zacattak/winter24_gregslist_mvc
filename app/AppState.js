@@ -1,3 +1,4 @@
+import { Job } from './models/Job.js'
 import { Car } from './models/Car.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
@@ -41,6 +42,16 @@ class ObservableAppState extends EventEmitter {
     //   hasSalvagedTitle: true,
     //   imgUrl: 'https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     // }),
+  ]
+  jobs = [
+    new Job({
+      title: 'bodyguard',
+      salary: '100000'
+    }),
+    new Job({
+      title: 'potato-planter',
+      salary: '1000000'
+    })
   ]
 }
 

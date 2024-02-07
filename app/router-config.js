@@ -17,8 +17,8 @@ export const router = new Router([
     // NOTE if url looks like 'localhost:8080/#/cars', this route object is loaded
     path: '#/cars', '#/jobs'
    
-    controllers: [CarsController],
+    controllers: [CarsController, JobsController]
     // NOTE filepath to our CarsView HTML file
-    view: 'app/views/CarsView.html'
+    view: 'app/views/CarsView.html', 'app/views/JobsView.html'
   }
 ])
