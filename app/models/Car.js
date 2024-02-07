@@ -31,7 +31,8 @@ export class Car {
           <h2>${this.year} ${this.make} ${this.model}</h2>
           <h2>$${this.price}</h2>
           <h3>${this.mileage} Miles</h3>
-          <h4>Listed on 12/12/2012</h4>
+          <h4>Listed on ${this.listedAtDate}</h4>
+          <h4>At ${this.listedAtTime}</h4>
           <p>${this.description}</p>
           <div class="d-flex">
             <p>Car Color:</p>
@@ -45,5 +46,12 @@ export class Car {
       </div>
     </div>
     `
+  }
+
+  get listedAtTime() {
+    return this.listedAt.toLocaleTimeString()
+  }
+  get listedAtDate() {
+    return this.listedAt.toLocaleDateString()
   }
 }
