@@ -36,7 +36,7 @@ export class Car {
           <p>${this.description}</p>
           <div class="d-flex">
             <p>Car Color:</p>
-            <div class="ms-4 car-color-circle"></div>
+            <div class="ms-4 car-color-circle" style="background-color: ${this.color};"></div>
           </div>
           <div class="fs-1">
             <i class="mdi mdi-engine-off" title="This car has a salvaged title"></i>
