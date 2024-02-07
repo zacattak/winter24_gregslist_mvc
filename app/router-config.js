@@ -6,18 +6,13 @@ import { Router } from "./utils/Router.js";
 export const router = new Router([
   {
     path: '',
-    controllers: [HomeController, ExamplesController],
     view: /*html*/`
-    <div class="bg-white p-3">
-      <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
-      </div>
-    </div>
+    <h1 class="m-4 display-3">Welcome to Gregslist!</h1>
+    <h2 class="m-4 display-4">Please select a category from the top navbar!</h2>
     `
   },
   {
     path: '#/about',
-    view: 'app/views/AboutView.html'
+    view: '<p>Sup</p>'
   }
 ])
