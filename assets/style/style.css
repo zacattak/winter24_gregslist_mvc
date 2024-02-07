@@ -5,3 +5,14 @@
   border-radius: 50%;
   background-color: black;
 }
+
+.car-img {
+  width: 25%;
+  object-fit: cover;
+}
+
+@media (max-width: 767.9px) {
+  .car-img {
+    width: 100%;
+  }
+}
