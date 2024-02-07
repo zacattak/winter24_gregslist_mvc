@@ -31,16 +31,15 @@ export class Car {
           <h2>${this.year} ${this.make} ${this.model}</h2>
           <h2>$${this.price}</h2>
           <h3>${this.mileage} Miles</h3>
-          <h4>Listed on ${this.listedAtDate}</h4>
-          <h4>At ${this.listedAtTime}</h4>
+          <h4>Listed on ${this.ListedAtDate}</h4>
+          <h4>At ${this.ListedAtTime}</h4>
           <p>${this.description}</p>
           <div class="d-flex">
             <p>Car Color:</p>
             <div class="ms-4 car-color-circle" style="background-color: ${this.color};"></div>
           </div>
           <div class="fs-1">
-            <i class="mdi mdi-engine-off" title="This car has a salvaged title"></i>
-            <i class="mdi mdi-engine" title="This car does not have a salvaged title"></i>
+            ${this.SalvagedTitleIcon}
           </div>
         </div>
       </div>
@@ -48,10 +47,19 @@ export class Car {
     `
   }
 
-  get listedAtTime() {
+  get ListedAtTime() {
     return this.listedAt.toLocaleTimeString()
   }
-  get listedAtDate() {
+  get ListedAtDate() {
     return this.listedAt.toLocaleDateString()
+  }
+
+  get SalvagedTitleIcon() {
+    if (this.hasSalvagedTitle) {
+      return '<i class="mdi mdi-engine-off" title="This car has a salvaged title"></i>'
+    }
+
+    // else
+    return '<i class="mdi mdi-engine" title="This car does not have a salvaged title"></i>'
   }
 }
