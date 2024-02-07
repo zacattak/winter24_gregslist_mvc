@@ -11,6 +11,7 @@ export class Car {
     this.imgUrl = data.imgUrl
     this.description = data.description
     this.hasSalvagedTitle = data.hasSalvagedTitle
+    // NOTE creates a new date object with the current date and time if no argument is passed to the date constructor
     this.listedAt = new Date()
   }
 
