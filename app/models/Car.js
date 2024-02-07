@@ -22,8 +22,8 @@ export class Car {
   get CarCardHTMLTemplate() {
     return `
     <div class="col-12">
-      <div class="bg-light rounded shadow-lg d-flex">
-        <img class="w-25 rounded-start"
+      <div class="bg-light rounded shadow-lg d-block d-md-flex">
+        <img class="w-md-25 w-100 rounded-start"
           src="https://images.unsplash.com/photo-1625658281581-2da46feb5d1d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Picture of car">
 
