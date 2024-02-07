@@ -13,6 +13,6 @@ export const router = new Router([
   },
   {
     path: '#/cars',
-    view: '<h1>This is the cars page</h1>'
+    view: 'app/views/CarsView.html'
   }
 ])
