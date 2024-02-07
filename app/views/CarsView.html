@@ -20,45 +20,45 @@
 
           <div class="mb-3">
             <label for="carModel">Model</label>
-            <input id="carModel" type="text" required minlength="1" maxlength="50">
+            <input id="carModel" name="model" type="text" required minlength="1" maxlength="50">
           </div>
 
           <div class="mb-3">
             <label for="carYear">Year</label>
-            <input id="carYear" type="number" required min="1900" max="2025" value="2024">
+            <input id="carYear" name="year" type="number" required min="1900" max="2025" value="2024">
           </div>
 
           <div class="mb-3">
             <label for="carPrice">Price</label>
             <!-- TODO show off a range slider -->
-            <input id="carPrice" type="number" required min="0" max="1000000">
+            <input id="carPrice" name="price" type="number" required min="0" max="1000000">
           </div>
 
           <div class="mb-3">
             <label for="carMileage">Mileage</label>
             <!-- TODO show off a range slider -->
-            <input id="carMileage" type="number" required min="1" max="1000000">
+            <input id="carMileage" name="mileage" type="number" required min="1" max="1000000">
           </div>
 
           <div class="mb-3">
             <label for="carImgUrl">ImgUrl</label>
             <!-- TODO show off a range slider -->
-            <input id="carImgUrl" type="url" required maxlength="1000">
+            <input id="carImgUrl" name="imgUrl" type="url" required maxlength="1000">
           </div>
 
           <div class="mb-3">
             <label for="carColor">Car Color</label>
-            <input type="color" id="carColor" value="#e66465" />
+            <input type="color" name="color" id="carColor" value="#e66465" />
           </div>
 
           <div class="mb-3">
             <label for="carDescription">Description of Car</label>
-            <textarea id="carDescription" class="w-100" rows="10" maxlength="1000"></textarea>
+            <textarea id="carDescription" name="description" class="w-100" rows="10" maxlength="1000"></textarea>
           </div>
 
           <div class="mb-3">
             <label for="carSalvaged">Salvaged Title?</label>
-            <input type="checkbox" id="carSalvaged" name="carSalvaged" />
+            <input type="checkbox" name="hasSalvagedTitle" id="carSalvaged" name="carSalvaged" />
           </div>
 
 

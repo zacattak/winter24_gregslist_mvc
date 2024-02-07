@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { carsService } from "../services/CarsService.js";
 import { getFormData } from "../utils/FormHandler.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
@@ -36,6 +37,8 @@ export class CarsController {
       const carFormData = getFormData(form)
 
       console.log('here is your car data object!', carFormData);
+
+      carsService.createCar(carFormData)
 
     } catch (error) {
       console.error(error);
