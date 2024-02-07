@@ -1,11 +1,80 @@
-<section class="container">
-  <div class="row mt-3">
+<div class="container">
+  <!-- ANCHOR heading -->
+  <section class="row mt-3">
     <div class="col-12">
       <h1>Car Listings</h1>
     </div>
-  </div>
+  </section>
 
-  <div id="carListings" class="row">
+  <!-- ANCHOR form -->
+  <section class="row my-3">
+    <div class="col-12 col-md-8 m-auto">
+      <div class="bg-light rounded shadow-lg p-4">
+
+        <form onsubmit="app.CarsController.createCar()">
+
+          <div class="mb-3">
+            <label for="carMake">Make</label>
+            <input id="carMake" type="text" required minlength="3" maxlength="15">
+          </div>
+
+          <div class="mb-3">
+            <label for="carModel">Model</label>
+            <input id="carModel" type="text" required minlength="1" maxlength="50">
+          </div>
+
+          <div class="mb-3">
+            <label for="carYear">Year</label>
+            <input id="carYear" type="number" required min="1900" max="2025" value="2024">
+          </div>
+
+          <div class="mb-3">
+            <label for="carPrice">Price</label>
+            <!-- TODO show off a range slider -->
+            <input id="carPrice" type="number" required min="0" max="1000000">
+          </div>
+
+          <div class="mb-3">
+            <label for="carMileage">Mileage</label>
+            <!-- TODO show off a range slider -->
+            <input id="carMileage" type="number" required min="1" max="1000000">
+          </div>
+
+          <div class="mb-3">
+            <label for="carImgUrl">ImgUrl</label>
+            <!-- TODO show off a range slider -->
+            <input id="carImgUrl" type="url" required maxlength="1000">
+          </div>
+
+          <div class="mb-3">
+            <label for="carColor">Car Color</label>
+            <input type="color" id="carColor" value="#e66465" />
+          </div>
+
+          <div class="mb-3">
+            <label for="carDescription">Description of Car</label>
+            <textarea id="carDescription" class="w-100" rows="10" maxlength="1000"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="carSalvaged">Salvaged Title?</label>
+            <input type="checkbox" id="carSalvaged" name="carSalvaged" />
+          </div>
+
+
+          <div class="text-end mb-3">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ANCHOR listings -->
+  <section id="carListings" class="row">
 
     <!-- STUB car card template -->
     <!-- <div class="col-12">
@@ -32,5 +101,5 @@
         </div>
       </div>
     </div> -->
-  </div>
-</section>
+  </section>
+</div>
