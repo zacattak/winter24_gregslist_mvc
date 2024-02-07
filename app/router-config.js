@@ -14,5 +14,9 @@ export const router = new Router([
   {
     path: '#/about',
     view: '<p>Sup</p>'
+  },
+  {
+    path: '#/cars',
+    view: '<h1>This is the cars page</h1>'
   }
 ])
