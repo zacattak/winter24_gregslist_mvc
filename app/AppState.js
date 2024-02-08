@@ -46,11 +46,13 @@ class ObservableAppState extends EventEmitter {
   jobs = [
     new Job({
       title: 'bodyguard',
-      salary: '100000'
+      salary: '100000',
+      imgUrl: 'https://unsplash.com/photos/security-guard-standing-on-the-gray-floor-8FxJi5wuwKc'
     }),
     new Job({
       title: 'potato-planter',
-      salary: '1000000'
+      salary: '1000000',
+      imgUrl: 'https://unsplash.com/photos/a-man-holding-a-bucket-full-of-potatoes-RlwOw1lTKSU'
     })
   ]
 }

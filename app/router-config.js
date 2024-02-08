@@ -1,3 +1,4 @@
+import { JobsController } from "./controllers/JobsController.js"
 import { CarsController } from "./controllers/CarsController.js";
 import { ExamplesController } from "./controllers/ExamplesController.js";
 import { HomeController } from "./controllers/HomeController.js";
@@ -15,10 +16,10 @@ export const router = new Router([
   },
   {
     // NOTE if url looks like 'localhost:8080/#/cars', this route object is loaded
-    path: '#/cars', '#/jobs'
-   
-    controllers: [CarsController, JobsController]
+    path: '#/cars', '#/jobs',
+
+    controllers: [CarsController, JobsController],
     // NOTE filepath to our CarsView HTML file
-    view: 'app/views/CarsView.html', 'app/views/JobsView.html'
+    view: 'app/views/CarsView.html', 'app/views/JobsView.html',
   }
 ])
