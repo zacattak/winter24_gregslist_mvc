@@ -15,11 +15,18 @@ export class Job {
                 <h2>${this.title}</h2>
                 <h2>${this.salary}</h2>
                 <h2>${this.location}</h2>
+                <h4>${this.listedAtDate}</h4>
+                <h4>${this.listedAtDate}</h4>
             </div>
         </div>
     </div>`
     }
 
-
+    get listedAtTime() {
+        return this.listedAtTime.toLocaleTimeString()
+    }
+    get listedAtDate() {
+        return this.listedAtDate.toLocaleDateString()
+    }
 
 }
